@@ -1,0 +1,362 @@
+:root {
+    --ivory: #f7f5ef;
+    --sage: #78947a;
+    /* alimentos */
+    --aqua: #4a9fd3;
+    /* limpieza  */
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: var(--ivory);
+    font-family: "Inter", sans-serif;
+    color: #1b1b1b;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    background: var(--ivory);
+    padding: 0.9rem 0;
+}
+
+/* Variables existentes */
+:root {
+    --salvia: #78947a;
+    /* Alimentos */
+    --aqua: #4a9fd3;
+    /* Limpieza  */
+    --link-base: #1b1b1b;
+}
+
+/* Estilo base del enlace */
+.nav-link {
+    position: relative;
+    color: #1b1b1b;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.25s ease;
+}
+
+/* Seudo-elemento para la línea */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    /* aprovecharemos el color actual */
+    transition: width 0.25s ease, left 0.25s ease;
+}
+
+/* HOVER – se expande desde el centro */
+.nav-link:hover {
+    color: #780404;
+    /* texto permanece — o cámbialo si prefieres */
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar-nav:hover .nav-link:not(:hover) {
+    opacity: 0.45;
+    transition: opacity 0.25s ease;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    height: calc(100vh - 78px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* 78 px ≈ alto navbar */
+.logo-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#logoDetersol {
+    width: 380px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    will-change: transform;
+}
+
+/* ---------- CTA BOTONES ---------- */
+.cta-links {
+    display: flex;
+    gap: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.cta-btn {
+    font-weight: 500;
+    font-size: 0.95rem;
+    font-family: "Inter", sans-serif;
+    padding: 0.55rem 2.6rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.25s ease, border-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.btn-food {
+    border: 2px solid var(--sage);
+    color: var(--sage);
+    background: transparent;
+}
+
+.btn-clean {
+    border: 2px solid var(--aqua);
+    color: var(--aqua);
+    background: transparent;
+}
+
+.btn-food:hover {
+    background: var(--sage);
+    color: #fff;
+}
+
+.btn-clean:hover {
+    background: var(--aqua);
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    #logoDetersol {
+        width: 280px;
+    }
+
+    .nav-link {
+        color: #000;
+        /* tu color base */
+        padding: 0.5rem 0.75rem;
+        /* más aire */
+    }
+}
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    50% {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    }
+}
+
+.cta-btn {
+    animation: breathe 4s ease-in-out infinite;
+    transition: transform 0.25s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    transition: gap 0.25s ease;
+}
+
+.arrow {
+    transition: transform 0.25s ease;
+}
+
+.cta-btn:hover .arrow {
+    transform: translateX(8px);
+}
+
+/* ---------- QUIÉNES SOMOS ---------- */
+#quienes {
+    background: #fff;
+}
+
+@media (min-width: 992px) {
+    #quienes h2 {
+        font-size: 2.75rem;
+    }
+}
+
+/* Animación helper */
+.wow-fade {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* ---------- FILTROS ---------- */
+.filter-pill {
+    border: 1px solid #d2d2d2;
+    background: #fff;
+    color: #1b1b1b;
+    padding: 0.45rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    font-size: 0.9rem;
+}
+
+.filter-pill.active,
+.filter-pill:hover {
+    box-shadow: 0 0 0 2px var(--aqua) inset;
+    color: var(--aqua);
+}
+
+.filter-pill.active[data-filter="food"] {
+    box-shadow: 0 0 0 2px var(--sage) inset;
+    color: var(--sage);
+}
+
+/* ---------- BORDER HALO POR DIVISIÓN ---------- */
+.border-sage {
+    border: 2px solid var(--sage);
+}
+
+.border-aqua {
+    border: 2px solid var(--aqua);
+}
+
+/* ---------- LOGOS ---------- */
+.brand-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ---------- TARJETA HOVER ---------- */
+.card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+/* ---------- RESPONSIVE CARRUSEL ---------- */
+@media (max-width: 575.98px) {
+    #brandGrid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .brand-card {
+        flex: 0 0 75%;
+        scroll-snap-align: center;
+    }
+}
+
+/* ---------- FILOSOFÍA ---------- */
+.value-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #fff;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.icon-wrap {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.bg-sage {
+    background: var(--sage, #78947a);
+}
+
+.bg-aqua {
+    background: var(--aqua, #4a9fd3);
+}
+
+/* ---------- CONTACTO ---------- */
+#contacto {
+    background: #f0efea;
+}
+
+/* gris-papel suave */
+#contacto .form-control:focus,
+#contacto .form-select:focus {
+    border-color: var(--sage);
+    box-shadow: 0 0 0 0.15rem rgba(120, 148, 122, 0.25);
+}
+
+/* same micro-ripple reuse */
+#btnEnviar {
+    position: relative;
+    overflow: hidden;
+}
+
+.marcas-strip {
+    overflow: hidden;
+}
+
+.strip {
+    padding: 1.25rem 0;
+    white-space: nowrap;
+}
+
+.strip.food {
+    background: #EFF3EF;
+}
+
+/* salvia muy claro */
+.strip.clean {
+    background: #EAF3FA;
+}
+
+/* aqua muy claro  */
+
+.logos {
+    display: inline-block;
+    animation: slide 25s linear infinite;
+}
+
+.logos img {
+    height: 48px;
+    margin: 0 2.5rem;
+    filter: grayscale(100%);
+    opacity: .8;
+    transition: filter .25s ease, opacity .25s ease;
+}
+
+/* Pausa en hover y colorea logo */
+.strip:hover .logos {
+    animation-play-state: paused;
+}
+
+.strip img:hover {
+    filter: none;
+    opacity: 1;
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(-50%);
+    }
+}

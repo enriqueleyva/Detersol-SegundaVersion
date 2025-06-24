@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Detersol – Hero + Navbar</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap 5 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- GSAP -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+
+	<body>
+		<!-- ============ NAVBAR ============ -->
+		<nav class="navbar navbar-expand-lg fixed-top bg-transparent">
+			<div class="container-fluid">
+				<!-- Botón hamburguesa -->
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navMain"
+					aria-controls="navMain"
+					aria-expanded="false"
+					aria-label="Menú"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Enlaces centrados -->
+				<div
+					class="collapse navbar-collapse justify-content-center"
+					id="navMain"
+				>
+					<ul class="navbar-nav gap-lg-4 text-uppercase fw-medium">
+						<li class="nav-item">
+							<a class="nav-link" href="#quienes">Quiénes somos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#marcas">Marcas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#filosofia">Filosofía</a>
+						</li>
+						<!-- <li class="nav-item">
+							<a class="nav-link" href="#proceso">Proceso</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#testimonios">Testimonios</a>
+						</li> -->
+						<li class="nav-item">
+							<a class="nav-link" href="#contacto">Contacto</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- ============ HERO ============ -->
+		<section class="hero" id="heroZone">
+			<div class="logo-wrap">
+				<!-- Logotipo -->
+				<img src="img/detersol-logo.png" alt="Detersol" id="logoDetersol" />
+
+				<!-- CTAs ghost -->
+				<div class="cta-links" id="ctaLinks">
+					<a href="/alimentos" class="cta-btn btn-food"
+						>Conoce nuestra división de alimentos<span class="arrow">→</span></a
+					>
+					<a href="/limpieza" class="cta-btn btn-clean"
+						>Conoce nuestra división de limpieza<span class="arrow">→</span></a
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ QUIÉNES SOMOS ============ -->
+		<section id="quienes" class="py-5">
+			<div class="container">
+				<div class="row align-items-center gy-5">
+					<!-- Texto -->
+					<div class="col-lg-6 order-2 order-lg-1">
+						<h2
+							class="display-5 fw-semibold mb-3"
+							style="font-family: 'Fraunces', serif"
+						>
+							¿Quiénes somos?
+						</h2>
+						<p class="mb-3 fs-5">
+							<strong>Detersol</strong> es un grupo familiar con
+							<span class="text-primary fw-bold">+45 años</span> de historia.
+							Nacimos elaborando
+							<span style="color: var(--sage)">alimentos auténticos</span> que
+							rescatan la tradición local y hoy también desarrollamos
+							<span style="color: var(--aqua)">soluciones de limpieza</span>
+							seguras para tu hogar.
+						</p>
+
+						<ul class="list-unstyled lh-lg">
+							<li>
+								🍃 Compromiso con <strong>ingredientes honestos</strong> y
+								procesos responsables.
+							</li>
+							<li>🏆 Certificaciones de calidad nacional e internacional.</li>
+							<li>
+								🤝 Equipo multidisciplinario que combina
+								<em>know-how</em> artesanal y tecnología.
+							</li>
+						</ul>
+					</div>
+
+					<!-- Imagen -->
+					<div class="col-lg-6 order-1 order-lg-2 text-center">
+						<!-- Sustituye la ruta por tu foto institucional -->
+						<img
+							src="img/opearario1.png"
+							alt="Equipo Detersol en planta"
+							class="rounded-4 shadow-sm w-100 wow-fade"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ MARCAS ============ -->
+		<section class="marcas-strip">
+			<div class="strip food">
+				<div class="logos">
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<!-- duplica la secuencia 2-3 veces para loop perfecto -->
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<!-- duplica la secuencia 2-3 veces para loop perfecto -->
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<!-- duplica la secuencia 2-3 veces para loop perfecto -->
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<!-- duplica la secuencia 2-3 veces para loop perfecto -->
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<!-- duplica la secuencia 2-3 veces para loop perfecto -->
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<!-- duplica la secuencia 2-3 veces para loop perfecto -->
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<!-- duplica la secuencia 2-3 veces para loop perfecto -->
+				</div>
+			</div>
+
+			<div class="strip clean">
+				<div class="logos">
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<img src="img/logo.webp" alt="Sabor de Caoba" />
+					<img src="img/logo.webp" alt="De la Mata" />
+					<!-- … -->
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ FILOSOFÍA ============ -->
+		<section id="filosofia" class="py-5">
+			<div class="container">
+				<!-- Encabezado -->
+				<div class="text-center mb-5">
+					<h2
+						class="display-5 fw-semibold mb-3"
+						style="font-family: 'Fraunces', serif"
+					>
+						Nuestra filosofía
+					</h2>
+					<p class="lead mx-auto" style="max-width: 680px">
+						Creamos valor a través de
+						<span style="color: var(--sage); font-weight: 600">tradición</span>,
+						<span style="color: var(--aqua); font-weight: 600">innovación</span>
+						y un firme compromiso con la
+						<span style="color: #780404; font-weight: 600">transparencia</span>
+						en todo lo que hacemos.
+					</p>
+				</div>
+
+				<!-- Valores clave -->
+				<div class="row gy-4 text-center">
+					<!-- Valor 1 -->
+					<div class="col-6 col-lg-3 wow-philo">
+						<div class="value-card shadow-sm p-4 rounded-4 h-100">
+							<div class="icon-wrap bg-sage mb-3 mx-auto">
+								<img
+									src="img/icons/tradicion.svg"
+									alt=""
+									width="32"
+									aria-hidden="true"
+								/>
+							</div>
+							<h5 class="fw-semibold mb-2">Tradición</h5>
+							<p class="small mb-0">
+								Rescatamos recetas y saberes locales desde 2001.
+							</p>
+						</div>
+					</div>
+
+					<!-- Valor 2 -->
+					<div class="col-6 col-lg-3 wow-philo">
+						<div class="value-card shadow-sm p-4 rounded-4 h-100">
+							<div class="icon-wrap bg-aqua mb-3 mx-auto">
+								<img
+									src="img/icons/calidad.svg"
+									alt=""
+									width="32"
+									aria-hidden="true"
+								/>
+							</div>
+							<h5 class="fw-semibold mb-2">Calidad</h5>
+							<p class="small mb-0">
+								Procesos certificados y materia prima seleccionada.
+							</p>
+						</div>
+					</div>
+
+					<!-- Valor 3 -->
+					<div class="col-6 col-lg-3 wow-philo">
+						<div class="value-card shadow-sm p-4 rounded-4 h-100">
+							<div class="icon-wrap bg-sage mb-3 mx-auto">
+								<img
+									src="img/icons/transparencia.svg"
+									alt=""
+									width="32"
+									aria-hidden="true"
+								/>
+							</div>
+							<h5 class="fw-semibold mb-2">Transparencia</h5>
+							<p class="small mb-0">
+								Etiquetado claro y trazabilidad de ingredientes.
+							</p>
+						</div>
+					</div>
+
+					<!-- Valor 4 -->
+					<div class="col-6 col-lg-3 wow-philo">
+						<div class="value-card shadow-sm p-4 rounded-4 h-100">
+							<div class="icon-wrap bg-aqua mb-3 mx-auto">
+								<img
+									src="img/icons/innovacion.svg"
+									alt=""
+									width="32"
+									aria-hidden="true"
+								/>
+							</div>
+							<h5 class="fw-semibold mb-2">Innovación</h5>
+							<p class="small mb-0">
+								I+D constante para soluciones más sostenibles.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+		</section>
+
+		<!-- ============ CONTACTO ============ -->
+		<section id="contacto" class="py-5">
+			<div class="container">
+				<div class="row g-lg-5 align-items-stretch">
+					<!-- Datos rápidos -->
+					<div class="col-lg-4 mb-5 mb-lg-0 wow-contact">
+						<div class="p-4 rounded-4 h-100 shadow-sm bg-white">
+							<h3
+								class="fw-semibold mb-3"
+								style="font-family: 'Fraunces', serif"
+							>
+								Hablemos
+							</h3>
+							<p class="mb-4">
+								¿Eres distribuidor, cliente mayorista o inversionista?<br />
+								Cuéntanos cómo podemos ayudar.
+							</p>
+
+							<ul class="list-unstyled fs-6 mb-4">
+								<li class="mb-2">
+									<strong>T. </strong
+									><a href="tel:+5215551234567">+52 (55) 5123-4567</a>
+								</li>
+								<li class="mb-2">
+									<strong>E. </strong
+									><a href="mailto:hola@detersol.com">hola@detersol.com</a>
+								</li>
+								<li>
+									<strong>WHATSAPP:</strong>
+									<a href="https://wa.me/5215551234567" target="_blank"
+										>Chatea ahora</a
+									>
+								</li>
+							</ul>
+
+							<!-- Redes -->
+							<div class="d-flex gap-3">
+								<a href="#" aria-label="LinkedIn"
+									><img src="img/icons/linkedin.svg" width="24" alt=""
+								/></a>
+								<a href="#" aria-label="Facebook"
+									><img src="img/icons/facebook.svg" width="24" alt=""
+								/></a>
+								<a href="#" aria-label="Instagram"
+									><img src="img/icons/instagram.svg" width="24" alt=""
+								/></a>
+							</div>
+						</div>
+					</div>
+
+					<!-- FORMULARIO -->
+					<div class="col-lg-8 wow-contact">
+						<form
+							id="contactForm"
+							class="p-4 p-lg-5 rounded-4 shadow-sm bg-white"
+						>
+							<h3
+								class="fw-semibold mb-4"
+								style="font-family: 'Fraunces', serif"
+							>
+								Envíanos un mensaje
+							</h3>
+
+							<div class="row g-3">
+								<div class="col-md-6">
+									<div class="form-floating">
+										<input
+											type="text"
+											class="form-control"
+											id="nombre"
+											placeholder="Nombre"
+											required
+										/>
+										<label for="nombre">Nombre completo</label>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-floating">
+										<input
+											type="email"
+											class="form-control"
+											id="email"
+											placeholder="email@example.com"
+											required
+										/>
+										<label for="email">Email</label>
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form-floating">
+										<input
+											type="text"
+											class="form-control"
+											id="empresa"
+											placeholder="Empresa / Organización"
+										/>
+										<label for="empresa"
+											>Empresa / Organización (opcional)</label
+										>
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form-floating">
+										<select id="interes" class="form-select" required>
+											<option selected disabled value="">
+												Selecciona tu interés…
+											</option>
+											<option value="Alimentos">Línea de alimentos</option>
+											<option value="Limpieza">Línea de limpieza</option>
+											<option value="Distribuidor">Distribución</option>
+											<option value="Inversionista">Inversión</option>
+										</select>
+										<label for="interes">Interés principal</label>
+									</div>
+								</div>
+
+								<div class="col-12">
+									<div class="form-floating">
+										<textarea
+											class="form-control"
+											placeholder="Mensaje"
+											id="mensaje"
+											style="height: 120px"
+											required
+										></textarea>
+										<label for="mensaje">Cuéntanos más…</label>
+									</div>
+								</div>
+							</div>
+
+							<!-- Botón -->
+							<div class="d-grid mt-4">
+								<button
+									type="submit"
+									class="cta-btn btn-food fw-semibold"
+									id="btnEnviar"
+								>
+									Enviar mensaje
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+		</section>
+
+		<!-- ============ SCRIPTS ============ -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="js/main.js"></script>
+
+		<!-- Animaciones GSAP -->
+	</body>
+</html>
